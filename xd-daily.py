@@ -1,3 +1,4 @@
+from logging import exception
 import requests
 import json
 import os
@@ -13,5 +14,9 @@ if(p2.status_code!=200):
 p2=p1.post("https://xxcapp.xidian.edu.cn/ncov/wap/default/index",headers=headers,data=data,timeout=10)
 if(p2.status_code!=200):
     raise Exception('不明原因失败');
-a=json.loads(p2.text)
-print(a['m'])
+try:
+    a=json.loads(p2.text)
+    print(a['m'])
+except exception:
+    print("不明原因失败")
+
