@@ -17,6 +17,6 @@ if(p2.status_code!=200):
 try:
     a=json.loads(p2.text)
     print(a['m'])
-except exception:
+except Exception:
     print("不明原因失败")
 
