@@ -32,4 +32,4 @@ jobs:
       env:
           username: ${{ secrets.username }}
           password: ${{ secrets.password }}
-      run: python xd-daily.py
+      run: python xd-Cov.py
